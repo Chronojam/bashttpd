@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: chronojam-serve-once
+  labels:
+    name: chronojam-serve-once
+spec:
+  replicas: 6
+  selector:
+    name: chronojam-serve-once
+  template:
+    metadata:
+      labels:
+        name: chronojam-serve-once
+    spec:
+      containers:
+      - name: chronojam-serve-once
+        image: quay.io/chronojam/serve-once:master
+        env:
+        - name: PORT
+          value: "80"
+        ports:
+        - containerPort: 80
+        imagePullPolicy: Always
