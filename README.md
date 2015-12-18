@@ -1,3 +1,10 @@
+Chronojam's Notes
+------------
+
+This is great for testing container failure, the following container will return its hostname then exit
+
+
+
 bashttpd is a simple, configurable web server written in bash
 
 Requirements
